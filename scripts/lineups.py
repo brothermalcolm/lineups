@@ -12,4 +12,10 @@ except ImportError:
     from PIL import Image
     import pytesseract
     raw = pytesseract.image_to_string(Image.open('767.jpg'))
-    print(raw,'\n')            
+    print(raw,'\n')
+    clean = raw.replace('O','').replace('0','').replace('Q','')
+    print(clean)
+    formation = raw.splitlines()
+    print(formation)
+
+            
