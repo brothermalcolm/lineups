@@ -11,5 +11,5 @@ try:
 except ImportError:
     from PIL import Image
     import pytesseract
-    print(pytesseract.image_to_string(Image.open('Screenshot.png')))
-    
+    raw = pytesseract.image_to_string(Image.open('767.jpg'))
+    print(raw,'\n')            
